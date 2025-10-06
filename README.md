@@ -1,16 +1,46 @@
-# COVID-19 Vaccination Data Analysis and Predictive Modeling
-This repository contains a comprehensive analysis of COVID-19 vaccination data in the United States. The project focuses on employing advanced statistical techniques and machine learning algorithms to gain insights and make accurate predictions regarding the total number of vaccinations administered.
+# 🧬 COVID-19 Vaccination Data Analysis & Predictive Modeling
 
-## Project Highlights:
-Data Source: The dataset used in this project encompasses crucial features such as location, vaccination metrics, and population statistics.
+This project analyzes U.S. COVID-19 vaccination trends and builds predictive models to estimate future vaccination counts.  
+It combines **data engineering**, **exploratory data analysis (EDA)**, and **machine learning** to uncover insights and forecast national vaccination progress.
 
-Data Preprocessing: Rigorous data preprocessing methodologies have been implemented, including interpolation and zero-filling, to ensure dataset accuracy and integrity for subsequent analysis.
+---
 
-Predictive Models: The project involves the development and evaluation of predictive models using various regression techniques. Notable achievements include a 98.62% accuracy rate for Linear Regression, 97.52% for MLP Regressor, and 88.32% for Random Forest Regressor in forecasting total vaccinations.
+### 🚀 Project Overview
+- **Objective:** Analyze vaccination distribution patterns across U.S. states and forecast total vaccinations using machine learning.  
+- **Tech Stack:** Python, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, H2O AutoML, SHAP, LIME  
+- **Core Techniques:** Regression modeling, feature engineering, regularization, model interpretability, AutoML optimization  
 
-Regularization Techniques: To prevent overfitting and optimize model performance, a range of regularization techniques including Elastic Net, Ridge, and Lasso have been applied.
+---
 
-AutoML Integration: AutoML (H2O) has been employed for automated model selection. The Gradient Boosting Machine emerged as the most effective model, showcasing superior predictive capabilities.
+### 🗂️ Data Preprocessing
+- **Data Source:** Public COVID-19 vaccination dataset (CDC / Our World in Data).  
+- **Data Cleaning:** Handled missing values with interpolation and zero-filling for continuous time-series consistency.  
+- **Feature Engineering:** Derived vaccination rate per 100 people, daily change, and population-adjusted ratios.  
+- **Data Validation:** Ensured data completeness and outlier removal using Pandas Profiling and correlation analysis.  
 
-Model Interpretability: Advanced techniques such as SHAP (SHapley Additive exPlanations), LIME (Local Interpretable Model-agnostic Explanations), and partial dependence plots have been utilized for detailed model interpretation. These techniques provide granular insights into feature importance and their impact on predictions, offering a comprehensive understanding of the underlying relationships within the data.
+---
 
+### 🤖 Machine Learning Workflow
+1. **Exploratory Analysis:** Visualized vaccination trends and state-level disparities using Seaborn and Matplotlib.  
+2. **Model Development:** Trained multiple supervised models:  
+   - Linear Regression (baseline)  
+   - Random Forest Regressor (ensemble)  
+   - MLP Regressor (neural-network-based)  
+3. **Regularization:** Applied **Ridge**, **Lasso**, and **Elastic Net** to reduce overfitting and improve model generalization.  
+4. **AutoML Integration:** Leveraged **H2O AutoML** to automate model selection and hyperparameter tuning — **Gradient Boosting Machine (GBM)** delivered the most stable performance.  
+5. **Evaluation Metrics:** Compared models using RMSE, MAE, and R² scores for accuracy and consistency.  
+
+---
+
+### 🧩 Model Interpretability
+To enhance transparency and explainability:  
+- **SHAP (SHapley Additive Explanations):** Identified key drivers behind vaccination rate predictions.  
+- **LIME (Local Interpretable Model-agnostic Explanations):** Visualized local feature contributions for individual predictions.  
+- **Partial Dependence Plots (PDP):** Illustrated marginal feature effects and feature-interaction dynamics.  
+
+---
+
+### 📊 Key Insights
+- Population density, healthcare access, and prior infection rates were top predictors influencing vaccination rates.  
+- Regularization improved model generalization across multiple data slices.  
+- AutoML-optimized **Gradient Boosting** achieved the best trade-off between performance and interpretability.  
